@@ -1,5 +1,6 @@
-nombre1 = 10
-nombre2 = nombre1 * nombre1
-nombre1 = 40
-nombre3 = nombre2 - nombre1 - 10
-print(nombre1, nombre2, nombre3)
+x = 50
+y = 100
+temporaire = y
+y = x
+x = temporaire
+print(x, y)
