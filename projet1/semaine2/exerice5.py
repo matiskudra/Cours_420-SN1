@@ -1,0 +1,18 @@
+import math
+
+print("Pour calculer la distance entre le point 1 et 2, les coordonnées de chaque point seront nécessaires")
+x_1 = int(input("Coordonnée x du point 1?"))
+y_1 = int(input("Coordonnée y du point 1?"))
+x_2 = int(input("Coordonnée x du point 2?"))
+y_2 = int(input("Coordonnée y du point 2?"))
+distance = math.sqrt((x_2 - x_1)**2 + (y_2 - y_1)**2)
+distance_arondi = round(distance, 2)
+print("Point A")
+print(f"X1 : {x_1}")
+print(f"Y1 : {y_1}")
+print()
+print("Point B")
+print(f"X2 : {x_2}")
+print(f"Y2 : {y_2}")
+print()
+print(f"Distance : {distance_arondi}")
