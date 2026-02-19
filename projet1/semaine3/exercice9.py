@@ -1,0 +1,3 @@
+from semaine3.sciences_nature import force_gravitationelle
+
+print(force_gravitationelle(500000000,30000000,2000000000))
