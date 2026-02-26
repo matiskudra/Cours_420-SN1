@@ -1,5 +1,5 @@
 masse = 5
-volume = 10
+volume = 0
 
 def densite(masse,volume):
     if masse<=0:
