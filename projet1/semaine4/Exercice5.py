@@ -1,19 +1,19 @@
-def calcul_pourcentage_cummule_TPs(note_tp1, note_tp2):
-    return (10*note_tp1*.2) + (10*note_tp2*.3)
+# On définit la fonction avec des paramètres (les entrées)
+def calcul_note_finale(tp1, tp2, ex1, ex2):
+    # Calcul des moyennes de blocs (sur 100)
+    moy_tps = (tp1 * 0.2 + tp2 * 0.3) * 2
+    moy_exams = (ex1 * 0.2 + ex2 * 0.3) * 2
 
-def calcul_pourcentage_cummule_examens(examen_1, examen_2):
-    return (examen_1*.2) + (examen_2*.3)
+    # Calcul de la note globale (somme des points réels)
+    note_globale = (tp1 * 0.2 + tp2 * 0.3) + (ex1 * 0.2 + ex2 * 0.3)
 
-
-
-
-
-
-
-nom_etudiant = (input("Nom de l'utilisateur?"))
-note_tp1 = int(input("Note de l'utilisateur au TP1? (sur 10)"))
-note_tp2 = int(input("Note de l'utilisateur au TP2? (sur 10)"))
-examen_1 = int(input("Note de l'utilisateur à l'examen 1? (sur 100)?"))
-examen_2 = int(input("Note de l'utilisateur à l'examen 2? (sur 100)?"))
+    if moy_exams >= 60 and moy_tps >= 60:
+        return note_globale
+    else:
+        # On compare les deux moyennes de blocs selon la consigne
+        return min(moy_tps, moy_exams)
 
 
+# Appel de la fonction avec des valeurs
+resultat = calcul_note_finale(70, 70, 70, 70)
+print(resultat)
