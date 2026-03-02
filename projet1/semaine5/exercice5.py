@@ -2,23 +2,32 @@
 
 import random
 
-def generer_nombre():
+#def generer_nombre():
 
-    nombre = 0
+#    nombre = 0
 
-    unite = 1
+#    unite = 1
+#    chiffre_aleatoire = random.randint(1,9)
+#    nombre += chiffre_aleatoire * unite
+
+#    unite = 10
+#    chiffre_aleatoire = random.randint(1,9)
+#    nombre += chiffre_aleatoire * unite
+
+#    unite = 100
+#    chiffre_aleatoire = random.randint(1,9)
+#    nombre += chiffre_aleatoire * unite
+
+#    return nombre
+
+#resultat = generer_nombre()
+#print(f"Nombre généré : {resultat}")
+
+nombre = 0
+unite = 1
+longueur_nombre = 3
+for i in range(longueur_nombre):
     chiffre_aleatoire = random.randint(1,9)
     nombre += chiffre_aleatoire * unite
-
-    unite = 10
-    chiffre_aleatoire = random.randint(1,9)
-    nombre += chiffre_aleatoire * unite
-
-    unite = 100
-    chiffre_aleatoire = random.randint(1,9)
-    nombre += chiffre_aleatoire * unite
-
-    return nombre
-
-resultat = generer_nombre()
-print(f"Nombre généré : {resultat}")
+    unite *=10
+print(f"Nombre généré : {nombre}")
