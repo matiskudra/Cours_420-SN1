@@ -26,6 +26,13 @@ plt.title("Croissance de 10 plantes sur 30 jours")
 plt.xlabel("jour")
 plt.ylabel("Hauteur (cm)")
 plt.grid(axis="both", linestyle='--', linewidth=0.8, color='#b0b0b0', alpha=1)
-plt.plot(jour, plante
+
+moyenne = []
+for i in range(len(jour)):
+    somme = plante1[i] + plante2[i] + plante3[i] + plante4[i] + plante5[i] + plante6[i] + plante7[i] + plante8[i] + plante9[i] + plante10[i]
+    moyenne.append(somme/10)
+
+plt.plot(jour, moyenne, color='orange', linewidth=2, label="Hauteur moyenne")
+plt.legend(loc="upper left", title_fontsize=10, prop={'size': 8}, markerscale=1)
 
 plt.show()
