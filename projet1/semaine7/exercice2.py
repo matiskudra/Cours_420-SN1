@@ -6,17 +6,32 @@ populations = {
 }
 saisons = ["Printemps", "Été", "Automne", "Hiver"]
 
-texte = "moyenne par saison"
 
 print(f"Recensement pour les {len(populations)} espèces :")
 print()
 
+moyenne_max = 0
 moyenne = []
 for c, v in populations.items():
-    somme = 0
-    for n in v:
-        somme += n
-    moyenne.append(somme / len(v))
-    moyenne_instant = somme / len(v)
-    print(f"{c} : {texte} = {moyenne_instant}")
+    moyenne = sum(v)/len(v)
 
+    if moyenne > moyenne_max:
+        moyenne_max = moyenne
+        nom_espece = c
+    print(f"{c} : moyenne annuelle = {round(moyenne, 1)} individus")
+print()
+
+print(f"Espèce la plus nombreuse : {nom_espece} ({round(moyenne_max, 1)} individus en moyenne)")
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+couleurs = ["blue", "orange", "green", "red"]
+
+plt.plot(saisons, populations["Cerfs"])
+plt.plot(saisons, populations["Renards"])
+plt.plot(saisons, populations["Lapins"])
+plt.plot(saisons, populations["Aigles"])
+
+plt.show()

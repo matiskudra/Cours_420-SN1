@@ -32,3 +32,15 @@ while nombre_lignes_ini <= nombre_lignes_desire:
         nombre_etoiles += 1
     print()
     nombre_lignes_ini += 1
+
+n_lignes = 4
+ligne_situe = 1
+
+for i in range(n_lignes):
+    n_etoiles_ini = 1
+    while n_etoiles_ini <= ligne_situe:
+        print("*", end='')
+        n_etoiles_ini += 1
+    print()
+    ligne_situe += 1
+
