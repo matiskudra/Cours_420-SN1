@@ -29,9 +29,16 @@ import matplotlib.pyplot as plt
 
 couleurs = ["blue", "orange", "green", "red"]
 
-plt.plot(saisons, populations["Cerfs"])
-plt.plot(saisons, populations["Renards"])
-plt.plot(saisons, populations["Lapins"])
-plt.plot(saisons, populations["Aigles"])
+plt.plot(saisons, populations["Cerfs"], label="Cerfs", marker="o")
+plt.plot(saisons, populations["Renards"], label="Renards", marker="o")
+plt.plot(saisons, populations["Lapins"], label="Lapins", marker="o")
+plt.plot(saisons, populations["Aigles"], label="Aigles", marker="o")
+
+
+plt.xlabel("Saison")
+plt.ylabel("Nombre d'individus")
+plt.title("Évolution des populations selon les saisons")
+plt.grid()
+plt.legend()
 
 plt.show()
